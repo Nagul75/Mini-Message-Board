@@ -2,7 +2,6 @@ const express = require('express')
 const path = require('path')
 
 const indexRouter = require('./routes/indexRouter')
-const newRouter = require('./routes/newRouter')
 
 const app = express()
 const PORT = 8080
@@ -14,7 +13,7 @@ const assetsPath = path.join(__dirname, "public")
 app.use(express.static(assetsPath))
 
 app.use("/", indexRouter)
-app.use("/new", newRouter)
+
 
 app.listen(PORT, () => {
     console.log(`Listening at Port: ${PORT}`)
