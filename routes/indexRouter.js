@@ -34,4 +34,10 @@ indexRouter.post("/new", (req, res) => {
     res.redirect("/")
 })
 
+indexRouter.get("/message/:name", (req, res) => {
+    const {name} = req.params
+    let message = messages.find(message => message.user === name)
+    res.render("messageDetails", {name: message.user, message: message.text, date: message.added } )
+})
+
 module.exports = indexRouter
