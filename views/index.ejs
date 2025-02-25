@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messages</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <h1>Messages</h1>
+    <div class="page-container">
+        <div class="page">
+            <h1>Messages</h1>
+            <ul>
+            <% messages.map((message) => { %>
+                <li><div class="message">
+                    <span><%= message.user %></span>
+                    <span><%= message.text %></span>
+                </div>
+                <li>
+            <% }) %>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
