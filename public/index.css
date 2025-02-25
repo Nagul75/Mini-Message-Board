@@ -38,3 +38,10 @@ ul {
     justify-content: flex-start;
 }
 
+button {
+    padding: 10px;
+}
+
+button a {
+    text-decoration: none;
+}

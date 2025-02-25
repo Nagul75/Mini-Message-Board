@@ -10,7 +10,13 @@
     <div class="page-container">
         <h1>Enter Your Message</h1>
         <div class="page">
-            <form action="/new" method="POST"></form>
+            <form action="/new" method="POST">
+                <label for="user">Name: </label>
+                <input type="text" name="user" for="user">
+                <label for="message">Message:  </label>
+                <input type="text" name="message" for="message">
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </div>
 </body>
